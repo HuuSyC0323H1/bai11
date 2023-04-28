@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  // let nhietdo=parseInt(prompt("nhietdocothe",''));
+  // let count=0;
+  // while (count<1000){
+  //     do {
+  //         if (nhietdo>100){
+  //             alert("Ban hay ha nhiet");
+  //             nhietdo=parseInt(prompt("nhietdocothe",''))
+  //         }else if (nhietdo<20){
+  //             alert("Ban hay tang than nhiet");
+  //             nhietdo=parseInt(prompt("nhietdocothe",''))
+  //         }
+  //     }while (20<nhietdo<100)
+  //     {
+  //         document.write("lan " + count);
+  //         count++;
+  //     }
+  // }
+  let nhietdo = Number(prompt("Nhập vào nhiệt độ"))
+  while (nhietdo<20 || nhietdo>100){
+      if(nhietdo<20){
+          alert("Nhiệt độ quá lạnh")
+          nhietdo = Number(prompt("Nhập vào nhiệt độ"))
+      }else if(nhietdo>100){
+          alert("Nhiệt độ quá nóng")
+          nhietdo = Number(prompt("Nhập vào nhiệt độ"))
+      }
+      alert("Nhiệt độ bình thường")
+  }
+
+
+</script>

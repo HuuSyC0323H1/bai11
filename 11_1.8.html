@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="batdau()">Bat dau</button>
+</body>
+</html>
+<script>
+    function batdau() {
+        let check=false;
+        let number1;
+        let number2;
+        while (!check){
+            number1 = prompt("nhap gia tri tu", '');
+            number2 = prompt("nhap gia tri den", '');
+            if ((isNaN(number1)) || (isNaN(number2))) {
+                alert('ban phai nhap dung la so ban yeu thich nhat');
+            } else check = true;
+        }
+
+        let count = 0;
+        let numberrandom = parseInt((number2 - number1 + 1) * Math.random() + number1);
+        console.log(numberrandom);
+
+        while (count < 3) {
+            let numberyou = prompt("gia tri ban doan", '');
+            count++;
+            if (numberyou > number2 && numberyou < number1) {
+                alert("gia tri cua ban doan ko nam trong khoang gia tri doan");
+            } else {
+                if (numberyou < numberrandom) {
+                    alert("nho hon");
+                } else if (numberyou > numberrandom) {
+                    alert('lon');
+                } else {
+                    alert('Chuc mung mung ban da trung thuong');
+                    break;
+                }
+            }
+            if (count === 3) {
+                alert("Ban da het luot choi");
+                return;
+            }
+        }
+    }
+
+</script>
